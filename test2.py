@@ -34,6 +34,7 @@ comments = [
 #     }
 
 def print_comments(i, comment_dict, n):
+    print(comment_dict)
     for comment in comments:
         if comment['id'] == i:
             print( n*'  ', comment['comment'])
@@ -45,9 +46,6 @@ def make_comments(list_of_comments):
     comment_dict = {}
     for comment in list_of_comments:
         comment_dict[comment['id']] = []
-        # if comment["parentCommentId"] == None:
-        #     commnet_dict[]
-            # current_comments.remove(comment)
         
     for comment in list_of_comments:    
         if comment['parentCommentId']:
@@ -62,6 +60,9 @@ def make_comments(list_of_comments):
     
         
 comment_ids = make_comments(comments)
+
+
+
 # for key, value in comment_ids.items():
 #     if len(value) == 0: 
 #         pass
