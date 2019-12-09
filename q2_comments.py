@@ -31,10 +31,10 @@ def print_comments(list_of_comments):
             send_comments(sorted_comments, comment_id, comments, n+1)
 
     def display_comments(comment_id, n, comments):
-        print(n*"    ", get_comment_text(comments, comment_id)[0])
+        print(n*"    ", get_comment_text(comments, comment_id))
 
     def get_comment_text(comments, my_id):
-        return [item['comment'] for item in comments if item['id'] == my_id]
+        return [item['comment'] for item in comments if item['id'] == my_id][0]
 
     c = defaultdict(list)
     for comment in list_of_comments:

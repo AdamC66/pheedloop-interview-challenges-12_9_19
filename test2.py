@@ -34,7 +34,6 @@ comments = [
 #     }
 
 def print_comments(i, comment_dict, n):
-    print(comment_dict)
     for comment in comments:
         if comment['id'] == i:
             print( n*'  ', comment['comment'])
